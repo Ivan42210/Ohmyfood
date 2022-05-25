@@ -1,15 +1,41 @@
 $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
+$black: black;
+$white: white;
 
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 %typo-text {
     font-family: 'Roboto', sans-serif;
 }
 
 %typo-title {
     font-family: 'Shrikhand', cursive;
+}
+
+header {
+    width: 100%;
+    @include flex-center;
+    ul {
+        list-style: none;
+        @include flex-center;
+        padding: 0;
+        li {
+            a {
+                font-family: 'Shrikhand', cursive;
+                text-decoration: none;
+                font-size: 2rem;
+                color: $black;
+            }
+        }
+    }
 }
