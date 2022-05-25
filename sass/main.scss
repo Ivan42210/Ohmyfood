@@ -3,11 +3,16 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $black: black;
 $white: white;
+$font-size:( title: 2.5rem, sub-title: 2rem, text: 1rem, );
+$screens: ( small: 599px, medium: 600px, large: 950px, );
 
 /*fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/*mixin*/
+
 @mixin flex-center {
     display: flex;
     justify-content: center;
@@ -21,6 +26,27 @@ $white: white;
     align-items: center;
 }
 
+@mixin mobil-only {
+    @media (max-width: map-get($screens, small)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: map-get($screens, large)) and (min-width: map-get($sreens, medium)) {
+        @content;
+    }
+}
+
+@mixin both {
+    @media (max-width: map-get($screens, medium)) {
+        @content;
+    }
+}
+
+
+/*extends*/
+
 %typo-text {
     font-family: 'Roboto', sans-serif;
 }
@@ -29,20 +55,16 @@ $white: white;
     font-family: 'Shrikhand', cursive;
 }
 
+
+/*elements*/
+
 header {
     width: 100%;
     @include flex-center;
-    ul {
-        list-style: none;
-        @include flex-center;
-        padding: 0;
-        li {
-            a {
-                font-family: 'Shrikhand', cursive;
-                text-decoration: none;
-                font-size: 2rem;
-                color: $black;
-            }
-        }
+    a {
+        @extend %typo-title;
+        font-size: map-get($font-size, title);
+        color: $black;
+        text-decoration: none;
     }
 }
