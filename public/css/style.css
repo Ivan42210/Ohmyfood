@@ -3,14 +3,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 /*mixin*/
 /*extends*/
-section ul li p, section ul li i {
+.Annonce p, section ul li p, section ul li i {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 .Annonce h1 {
   font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -74,6 +74,7 @@ section ul li {
   background-color: #f6f6f6;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 0;
