@@ -8,9 +8,15 @@
   font-size: 1rem;
 }
 
-.Annonce h1 {
+.Annonce--btn {
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
+  font-weight: bold;
+}
+
+.Annonce h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -79,6 +85,27 @@ section ul li {
   align-items: center;
   margin: 0;
   text-align: center;
+}
+.Annonce p {
+  margin-top: 0;
+}
+@media (max-width: 599px) {
+  .Annonce {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+}
+.Annonce--btn {
+  height: 50px;
+  width: 210px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: linear-gradient(70deg, #FF79DA, #9356DC);
+  text-decoration: none;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */

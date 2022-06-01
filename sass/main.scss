@@ -5,8 +5,9 @@ $grey-1: #eaeaea;
 $grey-2: #f6f6f6;
 $black: black;
 $white: white;
-$font-size:( title: 2.5rem, sub-title: 2rem, text: 1.5rem, );
+$font-size:( title: 2.5rem, sub-title: 1.5rem, text: 1rem, );
 $screens: ( small: 599px, medium: 600px, large: 950px, );
+$padding-margin: (1:1em, 2:1.5em, 3:2em, 4:2.5em);
 
 /*fonts*/
 
@@ -136,10 +137,29 @@ section {
 .Annonce {
     background-color: $grey-2;
     width: 100%;
-    @include flex-center;
+    @include flex-column-center;
     margin: 0;
     text-align: center;
     h1 {
+        @extend %typo-sub-bold;
+    }
+    p {
+        @extend %typo-text;
+        margin-top: 0;
+    }
+    @include mobil-only {
+        padding-left: map-get($padding-margin, 1);
+        padding-right: map-get($padding-margin, 1);
+    }
+    &--btn {
+        height: 50px;
+        width: 210px;
+        border-radius: 50px;
+        @include flex-center;
+        color: $white;
+        background-color: linear-gradient(70deg, $secondary-color, $primary-color);
         @extend %typo-text-bold;
+        text-decoration: none;
+        margin-bottom: map-get($padding-margin, 1);
     }
 }
