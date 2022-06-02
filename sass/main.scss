@@ -157,8 +157,8 @@ section {
         border-radius: 50px;
         @include flex-center;
         color: $white;
-        background-color: linear-gradient(70deg, $secondary-color, $primary-color);
         @extend %typo-text-bold;
+        background: linear-gradient(to top left, $primary-color, $secondary-color);
         text-decoration: none;
         margin-bottom: map-get($padding-margin, 1);
     }

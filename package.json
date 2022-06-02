@@ -4,8 +4,7 @@
     "description": "projet 3",
     "main": "index.js",
     "scripts": {
-        "sass": "sass --watch sass/main.scss:public/css/style.css",
-        "prefix": "postcss ./public/css/style.css --use autoprefixer -d./public/css/prefixed/"
+        "sass": "sass --watch sass/main.scss:css/main.css"
 
     },
     "repository": {
@@ -16,5 +15,6 @@
         "ohmyfood"
     ],
     "author": "Ivan Chavaren",
-    "license": "ISC"
+    "license": "ISC",
+    "browserslist": "last 4 versions"
 }
