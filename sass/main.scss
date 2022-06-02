@@ -3,11 +3,10 @@ $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $grey-1: #eaeaea;
 $grey-2: #f6f6f6;
-$black: black;
-$white: white;
-$font-size:( title: 2.5rem, sub-title: 1.5rem, text: 1rem, );
-$screens: ( small: 599px, medium: 600px, large: 950px, );
+$logo: 2.5rem;
+$screens: ( small: 768px, medium: 769px, large: 992px, );
 $padding-margin: (1:1em, 2:1.5em, 3:2em, 4:2.5em);
+$text-color:(black:black, white: white, grey:#b7b7b7);
 
 /*fonts*/
 
@@ -21,17 +20,25 @@ $padding-margin: (1:1em, 2:1.5em, 3:2em, 4:2.5em);
     margin: 0 auto;
 }
 
-@mixin flex-center {
+@mixin flex {
     display: flex;
-    justify-content: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin align-center {
     align-items: center;
 }
 
-@mixin flex-column-center {
-    display: flex;
-    flex-direction: column;
+@mixin space-between {
+    justify-content: space-between;
+}
+
+@mixin justify-center {
     justify-content: center;
-    align-items: center;
 }
 
 @mixin mobil-only {
@@ -52,114 +59,94 @@ $padding-margin: (1:1em, 2:1.5em, 3:2em, 4:2.5em);
     }
 }
 
-
-/*extends*/
-
-%typo-text {
+* {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    font-size: map-get($font-size, text);
-}
-
-%typo-text-bold {
-    font-family: 'Roboto', sans-serif;
-    font-size: map-get($font-size, text);
-    font-weight: bold;
-}
-
-%typo-sub {
-    font-family: 'Roboto', sans-serif;
-    font-size: map-get($font-size, sub-title);
-}
-
-%typo-sub-bold {
-    font-family: 'Roboto', sans-serif;
-    font-size: map-get($font-size, sub-title);
-    font-weight: bold;
-}
-
-%typo-title {
-    font-family: 'Shrikhand', cursive;
-    font-size: map-get($font-size, title);
-}
-
-%no-list {
-    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
     padding: 0;
 }
 
+h2 {
+    font-size: 25px;
+}
 
-/*elements*/
+h3 {
+    font-size: 16px;
+    font-weight: 300;
+}
 
-body {
-    margin: 0;
+h4 {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+h5 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.container {
+    padding: 1% 2%;
 }
 
 header {
     width: 100%;
-    @include flex-center;
-    a {
-        @extend %typo-title;
-        color: $black;
-        text-decoration: none;
-    }
+    text-align: center;
+    padding: 1em 0 1em 0;
+}
+
+.logo {
+    font-family: 'Shrikhand';
+    color: map-get($text-color, black);
+    font-size: $logo;
 }
 
 main {
     @include max-width-desktop;
-    @include both {
-        max-width: 100%
-    }
 }
 
-section {
-    @include flex-column-center;
-    width: 100%;
-    height: 10%;
-    margin: 0;
+.search {
+    @include flex-column;
+    @include align-center;
+    @include justify-center;
+    background: $grey-2;
+    text-align: center;
+    padding: 0;
     ul {
-        margin: 0;
-        background-color: $grey-1;
+        @include flex;
+        @include align-center;
+        @include justify-center;
+        background: $grey-1;
         width: 100%;
-        @extend %no-list;
-        @include flex-center;
+        padding: 2% 0;
         li {
-            margin: 0 10px 0 10px;
-            i {
-                @extend %typo-text;
-            }
-            p {
-                @extend %typo-text;
-            }
+            margin: 0 10px;
         }
     }
 }
 
-.Annonce {
-    background-color: $grey-2;
-    width: 100%;
-    @include flex-column-center;
-    margin: 0;
-    text-align: center;
-    h1 {
-        @extend %typo-sub-bold;
+.annunce {
+    @include flex-column;
+    @include align-center;
+    gap: 20px;
+    padding: 3% 0;
+    h3 {
+        color: map-get($text-color, grey);
     }
-    p {
-        @extend %typo-text;
-        margin-top: 0;
-    }
-    @include mobil-only {
-        padding-left: map-get($padding-margin, 1);
-        padding-right: map-get($padding-margin, 1);
-    }
-    &--btn {
-        height: 50px;
-        width: 210px;
-        border-radius: 50px;
-        @include flex-center;
-        color: $white;
-        @extend %typo-text-bold;
+    &--btn-purple {
+        @include flex;
+        @include align-center;
         background: linear-gradient(to top left, $primary-color, $secondary-color);
-        text-decoration: none;
-        margin-bottom: map-get($padding-margin, 1);
+        height: 50px;
+        color: map-get($text-color, white);
+        border-radius: 50px;
+        padding: 0 5%;
     }
+}
+
+.running {
+    @include flex-column;
+    @include justify-center;
 }
