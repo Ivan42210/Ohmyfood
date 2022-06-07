@@ -1,152 +1,57 @@
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$grey-1: #eaeaea;
-$grey-2: #f6f6f6;
-$logo: 2.5rem;
-$screens: ( small: 768px, medium: 769px, large: 992px, );
-$padding-margin: (1:1em, 2:1.5em, 3:2em, 4:2.5em);
-$text-color:(black:black, white: white, grey:#b7b7b7);
-
-/*fonts*/
-
-@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-/*mixin*/
-
-@mixin max-width-desktop {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-@mixin flex {
-    display: flex;
-}
-
-@mixin flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-@mixin align-center {
-    align-items: center;
-}
-
-@mixin space-between {
-    justify-content: space-between;
-}
-
-@mixin justify-center {
-    justify-content: center;
-}
-
-@mixin mobil-only {
-    @media (max-width: map-get($screens, small)) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media (max-width: map-get($screens, large)) and (min-width: map-get($sreens, medium)) {
-        @content;
-    }
-}
-
-@mixin both {
-    @media (max-width: map-get($screens, medium)) {
-        @content;
-    }
-}
-
-* {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-h2 {
-    font-size: 25px;
-}
-
-h3 {
-    font-size: 16px;
-    font-weight: 300;
-}
-
-h4 {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-h5 {
-    font-size: 13px;
-    font-weight: 400;
-}
-
-.container {
-    padding: 1% 2%;
-}
-
+@import "Utils/mixin";
+@import "Utils/variables";
+@import "Components/button";
+@import "Components/typo";
+@import "Layout/global";
 header {
-    width: 100%;
-    text-align: center;
-    padding: 1em 0 1em 0;
-}
-
-.logo {
-    font-family: 'Shrikhand';
-    color: map-get($text-color, black);
-    font-size: $logo;
-}
-
-main {
-    @include max-width-desktop;
+    @include flex;
+    @include justify-center;
 }
 
 .search {
-    @include flex-column;
-    @include align-center;
+    width: 100%;
+    @include flex;
     @include justify-center;
-    background: $grey-2;
-    text-align: center;
-    padding: 0;
-    ul {
-        @include flex;
-        @include align-center;
-        @include justify-center;
-        background: $grey-1;
-        width: 100%;
-        padding: 2% 0;
-        li {
-            margin: 0 10px;
-        }
-    }
 }
 
 .annunce {
+    width: 100%;
     @include flex-column;
-    @include align-center;
+    @include justify-center;
+    text-align: center;
+}
+
+.working-box {
+    @include flex;
+    @include space-between;
     gap: 20px;
-    padding: 3% 0;
-    h3 {
-        color: map-get($text-color, grey);
-    }
-    &--btn-purple {
-        @include flex;
-        @include align-center;
-        background: linear-gradient(to top left, $primary-color, $secondary-color);
-        height: 50px;
-        color: map-get($text-color, white);
-        border-radius: 50px;
-        padding: 0 5%;
+    @include mobil-only {
+        @include flex-column;
     }
 }
 
-.running {
-    @include flex-column;
-    @include justify-center;
+.working-card {
+    cursor: pointer;
+    width: 30%;
+    height: 80px;
+    border-radius: 20px;
+    background: lighten($black, 96%);
+    position: relative;
+    transition: all .5s ease-in-out;
+    &:hover {
+        background: lighten($primary, 30%);
+        color: $primary;
+    }
+    @include mobil-only {
+        width: 100%;
+    }
+    ul {
+        height: 100%;
+        @include flex;
+        justify-content: flex-start;
+        gap: 50px !important;
+        @include mobil-only {
+            gap: 30px !important;
+        }
+    }
 }

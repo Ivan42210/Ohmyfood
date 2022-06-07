@@ -1,0 +1,30 @@
+/*Global*/
+
+.main-width {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    gap: 10px;
+}
+
+
+/*padding margin*/
+
+.p {
+    @include padding;
+}
+
+
+/*backgrounds*/
+
+.bg {
+    @include bg;
+}

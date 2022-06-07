@@ -5,31 +5,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css\main.css">
+    <link rel="stylesheet" href="dist\css\main.min.css">
     <title>Acceuil</title>
 </head>
 
 <body>
-    <header>
+    <header class="main-width py-2">
 
-        <a href="index.html" class="logo">ohmyfood</a>
+        <a href="index.html" class="fs-logo text-dark logo-typo">ohmyfood</a>
 
     </header>
-    <main>
-        <section class="search container">
-            <ul>
-                <li><i class="fa-solid fa-location-dot"></i></li>
-                <li>Paris, Belleville</li>
+    <main class="main-width">
+        <section class="bg-grey">
+            <ul class="search py-1">
+                <li><i class="fa-solid fa-location-dot fs-sub"></i></li>
+                <li class="fs-sub">Paris, Belleville</li>
             </ul>
-            <div class="annunce container">
-                <h2>Réservez le menu qui vous convient</h2>
-                <h3>Découvrez des restaurants d'exception, séléctionés par nos soins.</h3>
-                <a href="#" class="annunce--btn-purple">Explorer nos restaurants</a>
+            <div class="annunce bg-slate py-2 px-3">
+                <h2 class="fs-title">Réservez le menu qui vous convient</h2>
+                <h3 class="fs-sub text-mid">Découvrez des restaurants d'exception, séléctionés par nos soins.</h3>
+                <a href="#" class="btn__main">Explorer nos restaurants</a>
             </div>
-        </section class="running container">
-        <h2>Fonctionnement</h2>
-        <section>
-
+        </section>
+        <section class="py-4 px-3">
+            <h2 class="fs-title">Fonctionnement</h2>
+            <div class="working-box py-4">
+                <article class="working-card">
+                    <ul>
+                        <li>1</li>
+                        <li><i class="fa-solid fa-mobile-screen-button"></i></li>
+                        <li>Choisissez un restaurant</li>
+                    </ul>
+                </article>
+                <article class="working-card">
+                    <ul>
+                        <li>2</li>
+                        <li><i class="fa-solid fa-list"></i></li>
+                        <li>Choisissez votre menu</li>
+                    </ul>
+                </article>
+                <article class="working-card"></article>
+            </div>
         </section>
         <section>
 

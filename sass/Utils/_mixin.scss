@@ -1,0 +1,127 @@
+/*responsives*/
+
+@mixin mobil-only {
+    @media (max-width: map-get($breakpoints, small)) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: map-get($breakpoints, large)) and (min-width: map-get($breakpoints, mid)) {
+        @content;
+    }
+}
+
+@mixin both {
+    @media (max-width: map-get($breakpoints, large)) {
+        @content;
+    }
+}
+
+
+/*padding*/
+
+@mixin padding {
+    @each $size,
+    $padding-margin in $padding-margins {
+        &-#{$size} {
+            padding: map-get($padding-margins, $size);
+        }
+        &t-#{$size} {
+            padding-top: map-get($padding-margins, $size);
+        }
+        &r-#{$size} {
+            padding-right: map-get($padding-margins, $size);
+        }
+        &b-#{$size} {
+            padding-bottom: map-get($padding-margins, $size);
+        }
+        &l-#{$size} {
+            padding-left: map-get($padding-margins, $size);
+        }
+        &x-#{$size} {
+            padding-left: map-get($padding-margins, $size);
+            padding-right: map-get($padding-margins, $size);
+        }
+        &y-#{$size} {
+            padding-top: map-get($padding-margins, $size);
+            padding-bottom: map-get($padding-margins, $size);
+        }
+    }
+}
+
+
+/*fonts*/
+
+@mixin text-color {
+    @each $clr,
+    $text-color in $text-colors {
+        &-#{$clr} {
+            color: map-get($text-colors, $clr);
+        }
+    }
+}
+
+@mixin font-size {
+    @each $fs,
+    $font-size in $font-sizes {
+        &-#{$fs} {
+            font-size: map-get($font-sizes, $fs);
+        }
+    }
+}
+
+
+/*flex-properties*/
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@mixin justify-center {
+    justify-content: center;
+}
+
+@mixin space-between {
+    justify-content: space-between;
+}
+
+
+/*backgrounds*/
+
+@mixin bg {
+    @each $clr,
+    $background in $backgrounds {
+        &-#{$clr} {
+            background: map-get($backgrounds, $clr);
+        }
+    }
+}
+
+
+/*buttons*/
+
+@mixin btn {
+    &__main {
+        background: $main;
+        color: map-get($text-colors, light);
+        width: 250px;
+        height: 50px;
+        padding: 0 2%;
+        border-radius: 50px;
+        @include flex;
+        @include justify-center;
+        transition: all .5s ease-in-out;
+        &:hover {
+            opacity: 80%;
+            box-shadow: 0 0 0 5px $primary;
+        }
+    }
+}
