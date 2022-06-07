@@ -28,8 +28,6 @@
 
 .btn__main:hover {
   opacity: 80%;
-  -webkit-box-shadow: 0 0 0 5px #9356DC;
-          box-shadow: 0 0 0 5px #9356DC;
 }
 
 /*text-color*/
@@ -221,6 +219,79 @@
   background: #f6f6f6;
 }
 
+/*shadow*/
+.shadow {
+  -webkit-box-shadow: 5px 5px 15px #c7c7c7;
+          box-shadow: 5px 5px 15px #c7c7c7;
+}
+
+/*working cards*/
+.working-card {
+  cursor: pointer;
+  width: 25%;
+  height: 70px;
+  border-radius: 20px;
+  background: whitesmoke;
+  position: relative;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  -webkit-box-shadow: 5px 5px 15px #c7c7c7;
+          box-shadow: 5px 5px 15px #c7c7c7;
+}
+
+.working-card:hover {
+  background: #e4d5f6;
+}
+
+.working-card:hover i {
+  color: #9356DC;
+}
+
+@media (max-width: 768px) {
+  .working-card {
+    width: 100%;
+  }
+}
+
+.working-card ul {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.working-card ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.working-card ul li:nth-child(1) {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 25px;
+  width: 25px;
+  background: #9356DC;
+  border-radius: 50%;
+  color: white;
+  position: absolute;
+  left: -13px;
+}
+
+.working-card ul li:nth-child(2) {
+  margin: 0 6% 0 10%;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -289,48 +360,6 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-}
-
-.working-card {
-  cursor: pointer;
-  width: 30%;
-  height: 80px;
-  border-radius: 20px;
-  background: whitesmoke;
-  position: relative;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.working-card:hover {
-  background: #e4d5f6;
-  color: #9356DC;
-}
-
-@media (max-width: 768px) {
-  .working-card {
-    width: 100%;
-  }
-}
-
-.working-card ul {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  gap: 50px !important;
-}
-
-@media (max-width: 768px) {
-  .working-card ul {
-    gap: 30px !important;
   }
 }
 /*# sourceMappingURL=main.css.map */

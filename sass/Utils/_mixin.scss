@@ -1,5 +1,9 @@
 /*responsives*/
 
+@mixin shadow {
+    box-shadow: 5px 5px 15px lighten($color: $black, $amount: 78);
+}
+
 @mixin mobil-only {
     @media (max-width: map-get($breakpoints, small)) {
         @content;
@@ -121,7 +125,6 @@
         transition: all .5s ease-in-out;
         &:hover {
             opacity: 80%;
-            box-shadow: 0 0 0 5px $primary;
         }
     }
 }
