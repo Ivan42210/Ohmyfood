@@ -1,12 +1,21 @@
-@import "Layout/global";
 @import "Utils/mixin";
 @import "Utils/variables";
+@import "Layout/global";
 @import "Components/button";
 @import "Components/typo";
 @import "Components/workingCard";
+@import "Components/restaurantCard";
+@import "Pages/restaurants";
+@import "Layout/footer";
 header {
     @include flex;
     @include justify-center;
+    position: relative;
+    .arrow {
+        margin: 0;
+        position: absolute;
+        left: 10%;
+    }
 }
 
 .search {
@@ -28,5 +37,14 @@ header {
     gap: 20px;
     @include mobil-only {
         @include flex-column;
+    }
+}
+
+.restaurant-box {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    @include mobil-only {
+        justify-content: center;
     }
 }

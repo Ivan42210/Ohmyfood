@@ -8,6 +8,7 @@
     background: lighten($black, 96%);
     position: relative;
     transition: all .5s ease-in-out;
+    gap: 10px !important;
     @include shadow;
     &:hover {
         background: lighten($primary, 30%);
