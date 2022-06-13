@@ -293,7 +293,7 @@ body {
 }
 
 .menu-part__title:after {
-  content: "____";
+  content: "_____";
   color: #99E2D0;
   font-weight: bold;
   position: absolute;
@@ -695,12 +695,12 @@ body {
 }
 
 .check i {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  -webkit-transition: -webkit-transform .3s ease-in-out;
-  transition: -webkit-transform .3s ease-in-out;
-  transition: transform .3s ease-in-out;
-  transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
   -webkit-transition-delay: .3s;
           transition-delay: .3s;
 }

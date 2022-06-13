@@ -49,7 +49,7 @@
             @include align-center;
             @include text(mid, title, small);
             &:after {
-                content: "____";
+                content: "_____";
                 color: $tertiary;
                 font-weight: bold;
                 position: absolute;

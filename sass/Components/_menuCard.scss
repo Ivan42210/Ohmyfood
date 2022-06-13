@@ -52,8 +52,8 @@
     @include text(light, logo, small);
     transition: all .5s ease-in-out;
     i {
-        transform: rotate(180deg);
-        transition: transform .3s ease-in-out;
+        transform: rotate(45deg);
+        transition: transform .5s ease-in-out;
         transition-delay: .3s;
     }
 }
