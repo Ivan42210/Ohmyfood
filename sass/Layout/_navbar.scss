@@ -1,0 +1,19 @@
+.navbar {
+    @extend %flex;
+    @include align-center;
+    @include justify-center;
+    position: relative;
+    @include padding-y;
+    box-shadow: lighten($black, 30%) 0px 10px 10px -10px;
+    .arrow {
+        margin: 0;
+        position: absolute;
+        left: 4%;
+        color: map-get($font-sizes, logo);
+    }
+    &__logo {
+        padding: 0;
+        font-family: 'Shrikhand', cursive !important;
+        @include text(dark, logo, bold);
+    }
+}

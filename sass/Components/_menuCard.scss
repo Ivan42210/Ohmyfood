@@ -1,0 +1,40 @@
+.menu-card {
+    @extend %flex;
+    width: 100%;
+    height: 70px;
+    border-radius: 20px;
+    overflow: hidden;
+    @include background(light);
+    @include desktop {
+        width: 30% !important;
+    }
+    @include tablet {
+        width: 48%;
+    }
+    &__description {
+        padding: 10px 5%;
+        width: 100%;
+        position: relative;
+        h4 {
+            @include text(dark, title, mid);
+            line-height: 29px;
+        }
+        h5 {
+            @include text(mid, sub, small);
+        }
+        span {
+            position: absolute;
+            right: 5%;
+            top: 38px;
+            @include text(dark, sub, bold);
+        }
+    }
+    &__check {
+        width: 70px;
+        @include background(tertiary);
+        @extend %flex;
+        @include justify-center;
+        @include align-center;
+        @include text(light, logo, small);
+    }
+}

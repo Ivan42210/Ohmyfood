@@ -1,50 +1,12 @@
 @import "Utils/mixin";
 @import "Utils/variables";
-@import "Layout/global";
-@import "Components/button";
-@import "Components/typo";
+@import "Layout/navbar";
+@import "Layout/footer";
+@import "Base/bases";
+@import "Pages/home";
+@import "Pages/menu";
+@import "Components/buttons";
 @import "Components/workingCard";
 @import "Components/restaurantCard";
-@import "Pages/restaurants";
-@import "Layout/footer";
-header {
-    @include flex;
-    @include justify-center;
-    position: relative;
-    .arrow {
-        margin: 0;
-        position: absolute;
-        left: 10%;
-    }
-}
-
-.search {
-    width: 100%;
-    @include flex;
-    @include justify-center;
-}
-
-.annunce {
-    width: 100%;
-    @include flex-column;
-    @include justify-center;
-    text-align: center;
-}
-
-.working-box {
-    @include flex;
-    @include space-between;
-    gap: 20px;
-    @include mobil-only {
-        @include flex-column;
-    }
-}
-
-.restaurant-box {
-    @include flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    @include mobil-only {
-        justify-content: center;
-    }
-}
+@import "Components/menuCard";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');

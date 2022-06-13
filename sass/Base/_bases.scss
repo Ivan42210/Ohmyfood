@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: $black;
+    &:hover {
+        color: black;
+    }
+}
+
+body {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    @include tablet {
+        max-width: 992px;
+    }
+    @include desktop {
+        max-width: 1400px;
+    }
+}
+
+.heading {
+    width: 100%;
+    &__search {
+        width: 100%;
+        @include background(grey-b);
+        @extend %flex;
+        @include justify-center;
+        gap: 1em;
+        @include text(mid, sub, small);
+        @include padding-y;
+    }
+    &__annunce {
+        padding: 2% 4%;
+        @extend %flex;
+        @include flex-col;
+        @include align-center;
+        width: 100%;
+        @include background(slate);
+        gap: 1em;
+        text-align: center;
+        h2 {
+            @include text(dark, title, large);
+        }
+        h3 {
+            @include text(mid, title, small);
+        }
+    }
+}
+
+.working {
+    &__section {
+        padding: 3em 4%;
+    }
+    &__box {
+        @extend %flex;
+        @include flex-col;
+        padding: 2em 0;
+        gap: 1em;
+        @include tablet {
+            @include flex-row;
+            flex-wrap: wrap;
+            @include space-b;
+        }
+    }
+}
+
+.restaurant {
+    &__section {
+        @include background(slate);
+        padding: 3em 4%;
+        position: relative;
+    }
+    &__box {
+        @extend %flex;
+        @include flex-col;
+        gap: 1em;
+        padding: 2em 0;
+        @include tablet {
+            @include flex-row;
+            flex-wrap: wrap;
+            @include space-b;
+        }
+        @include desktop {
+            padding: 2em 0 0 0;
+        }
+    }
+}

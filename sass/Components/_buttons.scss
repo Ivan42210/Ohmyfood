@@ -1,0 +1,68 @@
+.btn {
+    @include btn;
+}
+
+.heart {
+    &__card {
+        position: absolute;
+        cursor: pointer;
+        right: 4%;
+        top: 195px;
+        .fa-solid {
+            opacity: 0;
+            background: $main;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all .5s ease-in-out;
+        }
+        .fa-regular {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+        &:hover {
+            .fa-regular {
+                opacity: 0;
+                z-index: -1;
+            }
+            .fa-solid {
+                opacity: 1;
+            }
+        }
+    }
+    &__menu {
+        position: relative !important;
+        cursor: pointer;
+        margin-right: 15px;
+        .fa-regular {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            transition: all .5s ease-in-out;
+        }
+        .fa-solid {
+            opacity: 0;
+            background: $main;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all .5s ease-in-out;
+            z-index: 3;
+        }
+        &:hover {
+            .fa-regular {
+                opacity: 0;
+                z-index: -1;
+            }
+            .fa-solid {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.fa-heart {
+    font-size: map-get($font-sizes, logo);
+}
