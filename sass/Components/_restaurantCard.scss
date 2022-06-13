@@ -26,6 +26,12 @@
         padding: 5px 5%;
         @extend %flex;
         @include space-b;
+        h4 {
+            @include text (dark, title, mid);
+        }
+        h5 {
+            @include text(mid, sub, small);
+        }
     }
     @include tablet {
         width: 45%;

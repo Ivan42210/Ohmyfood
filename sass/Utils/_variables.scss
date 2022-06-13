@@ -8,6 +8,6 @@ $grey:#eaeaea;
 $slate:#f6f6f6;
 $backgrounds: (light:$white, slate: $slate, grey-b: $grey, black-b: black, dark: lighten($black, 10%), tertiary:$tertiary);
 $text-colors:(dark:$black, light:$white, mid: lighten($black, 25%), tertiary:$tertiary);
-$font-sizes: (logo:28px, title:20px, sub: 15px, text: 12px);
+$font-sizes: (logo:28px, title:17px, sub: 14px, text: 12px);
 $font-weights: (bold:bold, large: 900, mid: 600, small: 400);
 $breakpoints:( mid: 769px, large: 993px);

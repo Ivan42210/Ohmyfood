@@ -1,10 +1,11 @@
 .menu-card {
+    cursor: pointer;
     @extend %flex;
     width: 100%;
-    height: 70px;
     border-radius: 20px;
     overflow: hidden;
     @include background(light);
+    @include shadow;
     @include desktop {
         width: 30% !important;
     }
@@ -15,26 +16,44 @@
         padding: 10px 5%;
         width: 100%;
         position: relative;
+        overflow: hidden;
         h4 {
             @include text(dark, title, mid);
-            line-height: 29px;
+            margin-bottom: 5px
         }
         h5 {
             @include text(mid, sub, small);
         }
         span {
             position: absolute;
+            @include background (light);
             right: 5%;
-            top: 38px;
+            bottom: 5px;
             @include text(dark, sub, bold);
+            padding: 5px;
         }
     }
-    &__check {
-        width: 70px;
-        @include background(tertiary);
-        @extend %flex;
-        @include justify-center;
-        @include align-center;
-        @include text(light, logo, small);
+    &:hover {
+        .check {
+            width: 70px;
+            i {
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+.check {
+    width: 0px;
+    @include background(tertiary);
+    @extend %flex;
+    @include justify-center;
+    @include align-center;
+    @include text(light, logo, small);
+    transition: all .5s ease-in-out;
+    i {
+        transform: rotate(180deg);
+        transition: transform .3s ease-in-out;
+        transition-delay: .3s;
     }
 }

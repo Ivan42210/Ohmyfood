@@ -86,6 +86,26 @@
         @include shadow;
         align-items: center;
         transition: all .5s ease-in-out;
+        &--centered {
+            margin-top: 2em;
+            cursor: pointer;
+            align-self: center;
+            background: $main;
+            color: map-get($text-colors, light);
+            width: 250px;
+            height: 50px;
+            padding: 0 2%;
+            border-radius: 50px;
+            @extend %flex;
+            @include justify-center;
+            @include shadow;
+            align-items: center;
+            transition: all .5s ease-in-out;
+            &:hover {
+                opacity: 80%;
+                color: map-get($text-colors, light);
+            }
+        }
         &:hover {
             opacity: 80%;
             color: map-get($text-colors, light);
