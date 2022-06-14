@@ -6,8 +6,8 @@
     &__card {
         position: absolute;
         cursor: pointer;
-        right: 4%;
-        top: 195px;
+        right: 5%;
+        top: 189px;
         .fa-solid {
             opacity: 0;
             background: $main;
@@ -17,6 +17,7 @@
         }
         .fa-regular {
             position: absolute;
+            @include text(mid, logo, small);
             top: 0;
             left: 0;
             opacity: 1;

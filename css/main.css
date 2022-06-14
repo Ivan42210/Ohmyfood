@@ -384,8 +384,8 @@ body {
 .heart__card {
   position: absolute;
   cursor: pointer;
-  right: 4%;
-  top: 195px;
+  right: 5%;
+  top: 189px;
 }
 
 .heart__card .fa-solid {
@@ -400,6 +400,9 @@ body {
 
 .heart__card .fa-regular {
   position: absolute;
+  color: #404040;
+  font-size: 28px;
+  font-weight: 400;
   top: 0;
   left: 0;
   opacity: 1;
@@ -639,7 +642,7 @@ body {
 }
 
 .menu-card__description {
-  padding: 10px 5%;
+  padding: 14px 5%;
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -649,7 +652,7 @@ body {
   color: black;
   font-size: 17px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .menu-card__description h5 {
@@ -662,7 +665,7 @@ body {
   position: absolute;
   background: white;
   right: 5%;
-  bottom: 5px;
+  bottom: 8px;
   color: black;
   font-size: 14px;
   font-weight: bold;
@@ -670,7 +673,7 @@ body {
 }
 
 .menu-card:hover .check {
-  width: 70px;
+  width: 75px;
 }
 
 .menu-card:hover .check i {

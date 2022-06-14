@@ -13,13 +13,13 @@
         width: 48%;
     }
     &__description {
-        padding: 10px 5%;
+        padding: 14px 5%;
         width: 100%;
         position: relative;
         overflow: hidden;
         h4 {
             @include text(dark, title, mid);
-            margin-bottom: 5px
+            margin-bottom: 10px
         }
         h5 {
             @include text(mid, sub, small);
@@ -28,14 +28,14 @@
             position: absolute;
             @include background (light);
             right: 5%;
-            bottom: 5px;
+            bottom: 8px;
             @include text(dark, sub, bold);
             padding: 5px;
         }
     }
     &:hover {
         .check {
-            width: 70px;
+            width: 75px;
             i {
                 transform: rotate(360deg);
             }
