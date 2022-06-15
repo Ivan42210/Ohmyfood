@@ -3,7 +3,7 @@
 /*fonts*/
 /*display flex*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-.navbar, .footer__item, .heading__search, .heading__annunce, .working__box, .restaurant__box, .menu__section, .menu__heading, .menu-part__title, .menu-part__section, .btn__main, .btn__main--centered, .working-card, .working-card ul, .working-card ul li:nth-child(1), .restaurant-card figcaption, .newbanner, .menu-card, .check {
+.navbar, .footer__item, .heading__search, .heading__annunce, .working__box, .restaurant__box, .loading-page, .menu__section, .menu__heading, .menu-part__title, .menu-part__section, .btn__main, .btn__main--centered, .working-card, .working-card ul, .working-card ul li:nth-child(1), .restaurant-card figcaption, .newbanner, .menu-card, .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -85,22 +85,9 @@ a:hover {
 }
 
 body {
-  max-width: 768px;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   position: relative;
-}
-
-@media (min-width: 769px) {
-  body {
-    max-width: 992px;
-  }
-}
-
-@media (min-width: 993px) {
-  body {
-    max-width: 1400px;
-  }
 }
 
 .heading {
@@ -213,6 +200,99 @@ body {
 @media (min-width: 993px) {
   .restaurant__box {
     padding: 2em 0 0 0;
+  }
+}
+
+.loading-page {
+  height: 100vh;
+  position: fixed;
+  gap: 2em;
+  background: -webkit-gradient(linear, right bottom, left top, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(to top left, #FF79DA, #9356DC);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  inset: 0;
+  z-index: 1;
+  -webkit-animation: disappear 2s forwards .5s;
+          animation: disappear 2s forwards .5s;
+}
+
+.loading-page h1 {
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+  font-family: 'Shrikhand', cursive !important;
+}
+
+.loading-page > .spinner {
+  position: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border-top: solid 5px #9356DC;
+  border-right: solid 5px #99E2D0;
+  border-bottom: solid 5px #FF79DA;
+  border-left: solid 5px white;
+  -webkit-animation: spinner-animation 1s infinite linear;
+          animation: spinner-animation 1s infinite linear;
+}
+
+@-webkit-keyframes disappear {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes disappear {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes spinner-animation {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes spinner-animation {
+  0% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@media (min-width: 993px) {
+  .desktop-width {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
 

@@ -15,16 +15,9 @@ a {
 }
 
 body {
-    max-width: 768px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     position: relative;
-    @include tablet {
-        max-width: 992px;
-    }
-    @include desktop {
-        max-width: 1400px;
-    }
 }
 
 .heading {
