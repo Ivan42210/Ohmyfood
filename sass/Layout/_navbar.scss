@@ -4,7 +4,7 @@
     @include justify-center;
     position: relative;
     @include padding-y;
-    box-shadow: lighten($black, 30%) 0px 10px 10px -10px;
+    box-shadow: lighten($black, 30%) 0px 10px 6px -9px;
     .arrow {
         margin: 0;
         position: absolute;
