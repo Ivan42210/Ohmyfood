@@ -7,11 +7,12 @@
         height: 400px;
     }
     @include desktop {
-        height: 500px;
+        height: 580px;
     }
     img {
         object-fit: cover;
         width: 100%;
+        height: 100%;
         @include desktop {
             object-position: 80% 100%;
         }
@@ -23,15 +24,21 @@
         @include background(slate);
         @extend %flex;
         @include flex-col;
-        padding: 3em 4%;
+        @extend %section-padding;
         position: relative;
         width: 100%;
         margin-top: -75px;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         gap: 2em;
+        transition: all .5s ease;
         @include tablet {
             margin-top: -25px;
+        }
+        @include desktop {
+            border-top-left-radius: 80px;
+            border-top-right-radius: 80px;
+            margin-top: -75px;
         }
     }
     &__heading {
@@ -39,7 +46,7 @@
         @include align-center;
         @include space-b;
         h2 {
-            font-family: 'Shrikhand', cursive !important;
+            @extend %logo;
         }
     }
     &-part {
@@ -47,7 +54,7 @@
             position: relative;
             @extend %flex;
             @include align-center;
-            @include text(mid, title, small);
+            @extend %title-thin;
             &:after {
                 content: "_____";
                 color: $tertiary;

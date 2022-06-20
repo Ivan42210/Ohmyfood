@@ -28,7 +28,7 @@ body {
         @extend %flex;
         @include justify-center;
         gap: 1em;
-        @include text(mid, sub, small);
+        @extend %sub-title-thin;
         @include padding-y;
     }
     &__annunce {
@@ -41,17 +41,17 @@ body {
         gap: 1em;
         text-align: center;
         h2 {
-            @include text(dark, title, large);
+            @extend %title;
         }
         h3 {
-            @include text(mid, title, small);
+            @extend %title-thin;
         }
     }
 }
 
 .working {
     &__section {
-        padding: 3em 4%;
+        @extend %section-padding;
     }
     &__box {
         @extend %flex;
@@ -69,7 +69,7 @@ body {
 .restaurant {
     &__section {
         @include background(slate);
-        padding: 3em 4%;
+        @extend %section-padding;
         position: relative;
     }
     &__box {

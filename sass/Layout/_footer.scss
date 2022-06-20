@@ -1,6 +1,6 @@
 .footer {
     @include background(dark);
-    padding: 3em 4%;
+    @extend %section-padding;
     color: $white;
     &__logo {
         @include text(light, title, mid);

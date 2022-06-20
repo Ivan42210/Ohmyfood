@@ -45,10 +45,6 @@
 
 /*display flex*/
 
-%flex {
-    display: flex;
-}
-
 @mixin flex-row {
     flex-direction: row;
     align-items: center;

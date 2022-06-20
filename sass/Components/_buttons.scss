@@ -7,7 +7,7 @@
         position: absolute;
         cursor: pointer;
         right: 5%;
-        top: 189px;
+        top: 168px;
         .fa-solid {
             opacity: 0;
             background: $main;
@@ -24,13 +24,16 @@
             transition: all .5s ease-in-out;
         }
         &:hover {
-            .fa-regular {
+            &>.fa-regular {
                 opacity: 0;
                 z-index: -1;
             }
-            .fa-solid {
+            &>.fa-solid {
                 opacity: 1;
             }
+        }
+        @include desktop {
+            top: 228px;
         }
     }
     &__menu {

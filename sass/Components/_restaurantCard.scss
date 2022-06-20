@@ -1,6 +1,6 @@
 .restaurant-card {
     width: 100%;
-    height: 260px;
+    height: 230px;
     position: relative;
     overflow: hidden;
     @include background(light);
@@ -8,7 +8,7 @@
     @include shadow;
     img {
         object-fit: cover;
-        object-position: 0% 64%;
+        object-position: 0% 57%;
         width: 100%;
         height: 70%;
     }
@@ -23,21 +23,22 @@
     figcaption {
         width: 100%;
         position: relative;
-        padding: 5px 5%;
+        padding: 5px 5% 0 5%;
         @extend %flex;
         @include space-b;
         h4 {
-            @include text (dark, title, mid);
+            @extend %title;
         }
         h5 {
-            @include text(mid, sub, small);
+            @extend %title-thin;
         }
     }
     @include tablet {
         width: 45%;
     }
     @include desktop {
-        width: 30%;
+        width: 45%;
+        height: 315px;
         margin-bottom: 2em;
     }
     &__name {
