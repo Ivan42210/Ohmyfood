@@ -48,9 +48,14 @@
         }
         li:nth-child(3) {
             @extend %sub-title;
+            color: #000;
+            font-size: 14px;
+            font-weight: 600;
+            position: absolute;
+            left: 27%;
         }
-        @include desktop {
-            gap: 3em;
-        }
+    }
+    @include desktop {
+        gap: 3em;
     }
 }

@@ -627,8 +627,16 @@ body {
   }
 }
 
+.working-card ul li:nth-child(3) {
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  left: 27%;
+}
+
 @media (min-width: 993px) {
-  .working-card ul {
+  .working-card {
     gap: 3em;
   }
 }
