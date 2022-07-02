@@ -4,10 +4,8 @@
 
 .heart {
     &__card {
-        position: absolute;
+        position: relative;
         cursor: pointer;
-        right: 5%;
-        top: 168px;
         .fa-solid {
             opacity: 0;
             background: $main;
@@ -31,9 +29,6 @@
             &>.fa-solid {
                 opacity: 1;
             }
-        }
-        @include desktop {
-            top: 228px;
         }
     }
     &__menu {
