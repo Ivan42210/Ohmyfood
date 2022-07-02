@@ -4,7 +4,7 @@
 /*display flex*/
 /*buttons*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-.navbar, .footer__item, .heading__search, .heading__annunce, .working__box, .restaurant__box, .loading-page, .menu__section, .menu__heading, .menu-part__title, .menu-part__section, .btn__main, .btn__main--centered, .working-card, .working-card ul, .working-card ul li:nth-child(1), .restaurant-card figcaption, .newbanner, .menu-card, .check {
+.navbar, .footer__item, .heading__search, .heading__annunce, .working__box, .restaurant__box, .loading-page, .menu__section, .menu__heading, .menu-part__title, .menu-part__section, .btn__main, .btn__main--centered, .working-card, .working-card ul, .working-card ul li:nth-child(1), .restaurant-card figcaption, .newbanner, .menu-card, .menu-card__price, .check {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -22,7 +22,7 @@
   font-weight: bold;
 }
 
-.heading__annunce h2, .restaurant-card figcaption h4, .menu-card__description span {
+.heading__annunce h2, .restaurant-card figcaption h4, .menu-card__price span {
   color: black;
   font-size: 17px;
   font-weight: 600;
@@ -754,12 +754,18 @@ body {
   text-overflow: ellipsis;
 }
 
-.menu-card__description span {
-  position: absolute;
-  background: white;
-  right: 5%;
-  bottom: 8px;
-  padding: 5px;
+.menu-card__price {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 14px 5%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .menu-card:hover .check {

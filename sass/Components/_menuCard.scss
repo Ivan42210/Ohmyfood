@@ -31,13 +31,15 @@
             overflow: hidden;
             text-overflow: ellipsis;
         }
+    }
+    &__price {
+        @extend %flex;
+        @include flex-col;
+        justify-content: center;
+        padding: 14px 5%;
+        justify-content: flex-end;
         span {
-            position: absolute;
-            @include background (light);
-            right: 5%;
-            bottom: 8px;
             @extend %title;
-            padding: 5px;
         }
     }
     &:hover {
